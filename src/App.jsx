@@ -1,5 +1,7 @@
 import './App.css';
 import ItemCardCollection from './component/ItemCardCollection';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ShopPage } from './pages/ShopPage';
 
 function App() {
   // return (
@@ -24,7 +26,19 @@ function App() {
     '4': testInfo
   };
 
-  return <ItemCardCollection collection={testColletion} />
+  const _name = "ABC Company"
+  const _description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  const _description2 = "Lorem ipsum"
+  // return <ItemCardCollection collection={testColletion} />
+  return (
+    <BrowserRouter>
+      <Routes>
+      <Route path="/itemcard" element={<ItemCardCollection collection={testColletion} />} />
+        <Route path="/shop1" element={<ShopPage name={_name} description={_description} />} />
+        <Route path="/shop2" element={<ShopPage name={_name} description={_description2} />} />
+      </Routes>
+    </BrowserRouter> 
+  )
 }
 
 export default App;
