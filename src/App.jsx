@@ -2,6 +2,8 @@ import "./App.css"
 import ItemCardCollection from "./component/ItemCardCollection"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ShopPage } from "./pages/ShopPage"
+import { ItemPage } from "./pages/ItemPage"
+
 
 function App() {
   // return (
@@ -37,6 +39,7 @@ function App() {
         <Route path="/itemcard" element={<ItemCardCollection collection={testColletion} />} />
         <Route path="/shop1" element={<ShopPage name={_name} description={_description} />} />
         <Route path="/shop2" element={<ShopPage name={_name} description={_description2} />} />
+        <Route path="/itempage" element={<ItemPage name={_name} description={_description} />} />
       </Routes>
     </BrowserRouter>
   )
