@@ -5,7 +5,7 @@ import InlineButton from "./InlineButton"
 
 export default function Header() {
   return (
-    <div className="flex w-full items-center justify-between py-5 px-10">
+    <div className="flex w-full items-center justify-between py-5 px-5 lg:px-10">
       <img src={Logo} className="w-8 object-contain lg:w-10" />
       <img src={Titlecard} className="w-32 object-contain lg:w-40" />
       <div className="flex gap-3 lg:gap-5">
