@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ShopPage } from "./pages/ShopPage"
 import { ItemPage } from "./pages/ItemPage"
 import CatalogPage from "./pages/CatalogPage"
+import LandingPage from "./pages/LandingPage"
 
 function App() {
   // return (
@@ -46,6 +47,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/itemcard" element={<ItemCardCollection collection={testCollection} />} />
         <Route path="/shop1" element={<ShopPage items={testCollection} shopInfo={testShopInfo} />} />
         <Route path="/shop2" element={<ShopPage items={testCollection} shopInfo={testShopInfo} />} />

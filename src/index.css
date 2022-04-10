@@ -4,6 +4,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
 
+@layer utilities {
+  .bg-clip-custom {
+      clip-path: url(#bgClip);
+  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #ddd !important
@@ -11,4 +17,12 @@
 
 .swiper-pagination-bullet-active {
   background-color: rgb(234, 179, 8) !important;
+}
+
+.pop {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+input {
+  -webkit-appearance: none;
 }

@@ -49,7 +49,7 @@ export default function CatalogPage({ items }) {
                       <div className="flex  items-center gap-2 pr-6">
                         <div
                           className={
-                            (selectedFilters[filterCategory]?.includes(filter) ? "bg-sky-400 " : "bg-transparent ") +
+                            (selectedFilters[filterCategory]?.includes(filter) ? "bg-cyan-400 " : "bg-transparent ") +
                             "h-5 w-5 cursor-pointer border-2 border-gray-500"
                           }
                           onClick={() => {
@@ -139,7 +139,7 @@ export default function CatalogPage({ items }) {
                         <div className="flex  items-center gap-2 pr-6">
                           <div
                             className={
-                              (selectedFilters[filterCategory]?.includes(filter) ? "bg-sky-400 " : "bg-transparent ") +
+                              (selectedFilters[filterCategory]?.includes(filter) ? "bg-cyan-400 " : "bg-transparent ") +
                               "h-5 w-5 cursor-pointer border-2 border-gray-500"
                             }
                             onClick={() => {

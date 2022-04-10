@@ -1,14 +1,14 @@
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./src/**/*.{html,js,jsx}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       screens: {
-        'sm': '450px',
+        sm: "450px",
       },
       fontFamily: {
-        'sans': ['Poppins', 'sans-serif']
-      }
+        sans: ["Poppins", "sans-serif"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 }

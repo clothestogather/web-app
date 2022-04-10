@@ -1,7 +1,12 @@
 import React from "react"
-export function ItemCard({ name, currency, price, rating, imgs }) {
+export function ItemCard({ name, currency, price, rating, imgs, featured }) {
   return (
-    <div className="w-auto max-w-[15rem] transform divide-y divide-gray-500 rounded-2xl border border-gray-500 bg-gray-200 shadow-lg transition-all duration-300  hover:-translate-y-1 hover:cursor-pointer hover:shadow-2xl sm:rounded-[2rem]">
+    <div
+      className={
+        "w-auto max-w-[15rem] transform divide-y divide-gray-500 rounded-2xl border border-gray-500 shadow-lg transition-all duration-300  hover:-translate-y-1 hover:cursor-pointer hover:shadow-2xl sm:rounded-[2rem] " +
+        (featured ? "bg-[#EEDCB7]" : "bg-gray-200")
+      }
+    >
       {/* <!-- Image --> */}
       <img
         className="aspect-square w-[250px] justify-center rounded-t-2xl object-cover sm:rounded-t-[2rem]"

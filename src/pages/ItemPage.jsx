@@ -97,7 +97,7 @@ export function ItemPage({
             <div className="flex w-full flex-col gap-5">
               <p className="text-xl text-black lg:text-2xl">
                 {" "}
-                Other <font class="text-sky-400">{type}</font> that are <font class="text-sky-400">{color}</font>
+                Other <font class="text-cyan-400">{type}</font> that are <font class="text-cyan-400">{color}</font>
               </p>
               <ItemCardCollection collection={similarItems} />
             </div>
