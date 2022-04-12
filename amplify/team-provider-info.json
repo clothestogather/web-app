@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-clothestogather-staging-54354-authRole",
+      "UnauthRoleArn": "arn:aws:iam::281211975624:role/amplify-clothestogather-staging-54354-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::281211975624:role/amplify-clothestogather-staging-54354-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-clothestogather-staging-54354-deployment",
+      "UnauthRoleName": "amplify-clothestogather-staging-54354-unauthRole",
+      "StackName": "amplify-clothestogather-staging-54354",
+      "StackId": "arn:aws:cloudformation:us-east-1:281211975624:stack/amplify-clothestogather-staging-54354/8a192c50-ba23-11ec-87c9-1205cd516395",
+      "AmplifyAppId": "d1iwbbye72sxul"
+    }
+  }
+}

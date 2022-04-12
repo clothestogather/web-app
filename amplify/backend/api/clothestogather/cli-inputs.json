@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "clothestogather",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/yucheukhei/Documents/HackUST2022/web-app/amplify/backend/api/clothestogather/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
