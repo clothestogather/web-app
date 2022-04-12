@@ -25,7 +25,7 @@ export default function ShoppingCartPage({ items }) {
           <div className="flex w-full max-w-3xl flex-col items-start gap-8 px-8">
             <h1 className="text-xl font-bold">Shopping Cart</h1>
             <div className="flex w-full flex-col items-start justify-between gap-5">
-              {items ? (
+              {!Object.keys(items).length ? (
                 <div>There are no items in your shopping cart.</div>
               ) : (
                 Object.entries(items).map(([itemID, item]) => (

@@ -6,6 +6,7 @@ import { ItemPage } from "./pages/ItemPage"
 import CatalogPage from "./pages/CatalogPage"
 import LandingPage from "./pages/LandingPage"
 import ShoppingCartPage from "./pages/ShoppingCartPage"
+import EditShopPage from "./pages/EditShopPage"
 
 function App() {
   // return (
@@ -58,6 +59,7 @@ function App() {
         />
         <Route path="/catalog" element={<CatalogPage items={testCollection} />} />
         <Route path="/cart" element={<ShoppingCartPage items={{}} />} />
+        <Route path="/editshop" element={<EditShopPage shopInfo={testShopInfo} />} />
       </Routes>
     </BrowserRouter>
   )
