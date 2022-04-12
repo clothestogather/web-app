@@ -1,57 +1,65 @@
 import React from "react"
 
-export function InstagramIcon({ width, height, className }) {
+export function InstagramIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
       <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
     </svg>
   )
 }
 
-export function WebsiteIcon({ width, height, className }) {
+export function WebsiteIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path d="M352 256C352 278.2 350.8 299.6 348.7 320H163.3C161.2 299.6 159.1 278.2 159.1 256C159.1 233.8 161.2 212.4 163.3 192H348.7C350.8 212.4 352 233.8 352 256zM503.9 192C509.2 212.5 512 233.9 512 256C512 278.1 509.2 299.5 503.9 320H380.8C382.9 299.4 384 277.1 384 256C384 234 382.9 212.6 380.8 192H503.9zM493.4 160H376.7C366.7 96.14 346.9 42.62 321.4 8.442C399.8 29.09 463.4 85.94 493.4 160zM344.3 160H167.7C173.8 123.6 183.2 91.38 194.7 65.35C205.2 41.74 216.9 24.61 228.2 13.81C239.4 3.178 248.7 0 256 0C263.3 0 272.6 3.178 283.8 13.81C295.1 24.61 306.8 41.74 317.3 65.35C328.8 91.38 338.2 123.6 344.3 160H344.3zM18.61 160C48.59 85.94 112.2 29.09 190.6 8.442C165.1 42.62 145.3 96.14 135.3 160H18.61zM131.2 192C129.1 212.6 127.1 234 127.1 256C127.1 277.1 129.1 299.4 131.2 320H8.065C2.8 299.5 0 278.1 0 256C0 233.9 2.8 212.5 8.065 192H131.2zM194.7 446.6C183.2 420.6 173.8 388.4 167.7 352H344.3C338.2 388.4 328.8 420.6 317.3 446.6C306.8 470.3 295.1 487.4 283.8 498.2C272.6 508.8 263.3 512 255.1 512C248.7 512 239.4 508.8 228.2 498.2C216.9 487.4 205.2 470.3 194.7 446.6H194.7zM190.6 503.6C112.2 482.9 48.59 426.1 18.61 352H135.3C145.3 415.9 165.1 469.4 190.6 503.6V503.6zM321.4 503.6C346.9 469.4 366.7 415.9 376.7 352H493.4C463.4 426.1 399.8 482.9 321.4 503.6V503.6z" />
     </svg>
   )
 }
 
-export function FacebookIcon({ width, height, className }) {
+export function FacebookIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
       <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
     </svg>
   )
 }
 
-export function DropdownIcon({ width, height, className }) {
+export function DropdownIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
       <path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z" />
     </svg>
   )
 }
 
-export function CheckboxIcon({ width, height, className }) {
+export function CheckboxIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
       <path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
     </svg>
   )
 }
 
-export function FilterIcon({ width, height, className }) {
+export function FilterIcon({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z"/>
     </svg>
   )
 }
 
-export function CircleBg({ width, height, className }) {
+export function CircleBg({ width, height, className, onClick }) {
   return (
-    <svg width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/>
+    </svg>
+  )
+}
+
+export function RemoveIcon({ width, height, className, onClick }) {
+  return (
+    <svg onClick={onClick} width={width} height={height} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"/>
     </svg>
   )
 }

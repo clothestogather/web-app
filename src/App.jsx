@@ -5,6 +5,7 @@ import { ShopPage } from "./pages/ShopPage"
 import { ItemPage } from "./pages/ItemPage"
 import CatalogPage from "./pages/CatalogPage"
 import LandingPage from "./pages/LandingPage"
+import ShoppingCartPage from "./pages/ShoppingCartPage"
 
 function App() {
   // return (
@@ -27,10 +28,10 @@ function App() {
   }
 
   const testCollection = {
-    1: testItemInfo,
-    2: testItemInfo,
-    3: testItemInfo,
-    4: testItemInfo,
+    '1': testItemInfo,
+    '2': testItemInfo,
+    '3': testItemInfo,
+    '4': testItemInfo,
   }
 
   const testShopInfo = {
@@ -56,6 +57,7 @@ function App() {
           element={<ItemPage item={testItemInfo} similarItems={testCollection} shopItems={testCollection} />}
         />
         <Route path="/catalog" element={<CatalogPage items={testCollection} />} />
+        <Route path="/cart" element={<ShoppingCartPage items={testCollection} />} />
       </Routes>
     </BrowserRouter>
   )
