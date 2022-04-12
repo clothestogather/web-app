@@ -262,7 +262,7 @@ export default function LandingPage() {
             </div>
 
             {/* Featured Items */}
-            <div className="flex flex-col items-center gap-4 rounded-t-[75px] bg-white w-full p-6  shadow-2xl lg:mt-10 lg:w-min lg:px-16">
+            <div className="flex flex-col items-center gap-4 rounded-t-[75px] bg-white w-full p-6  shadow-2xl lg:mt-10 lg:w-min lg:px-16 lg:py-12 lg:gap-8">
               <h1 className="text-lg font-semibold lg:text-2xl">Featured Items</h1>
               <ItemCardCollection collection={testCollection} />
             </div>
