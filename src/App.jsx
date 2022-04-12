@@ -57,7 +57,7 @@ function App() {
           element={<ItemPage item={testItemInfo} similarItems={testCollection} shopItems={testCollection} />}
         />
         <Route path="/catalog" element={<CatalogPage items={testCollection} />} />
-        <Route path="/cart" element={<ShoppingCartPage items={testCollection} />} />
+        <Route path="/cart" element={<ShoppingCartPage items={{}} />} />
       </Routes>
     </BrowserRouter>
   )
