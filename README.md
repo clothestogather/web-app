@@ -10,7 +10,7 @@ This repository contains the source code for the [partial prototype / user inter
 - provide AI try-on function
 - alerts when there is overconsumption
 
-Please check the other [repository](https://github.com/clothestogather/Virtual-Try-On) that has an implementation of the AI try-on function.
+**Important**: Please check the other [repository](https://github.com/clothestogather/Virtual-Try-On) that has an implementation of the AI try-on function.
 
 ---
 
