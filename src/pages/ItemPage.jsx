@@ -7,7 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+<<<<<<< HEAD
 import { useLocation, useNavigate } from "react-router-dom"
+=======
+import RatingBox from "../component/Rating";
+>>>>>>> 06efde5a6ea89bce4fb6bfb8e7eb68d16f5ba288
 
 export function ItemPage({
   similarItems,
@@ -70,6 +74,19 @@ export function ItemPage({
                     <div className="text-[0.5rem] text-yellow-600 sm:text-base">★</div>
                     <div className="text-base font-semibold text-yellow-700 sm:text-2xl">{rating}</div>
                   </div>
+                  {/* Try On Button */}
+                  <div className="items-center justify-between">
+                    <button
+                      href="#"
+                      class="text-md relative flex rounded-full border border-gray-500 bg-yellow-400 py-1 px-6 font-bold text-gray-900 shadow-lg hover:bg-yellow-300"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" 
+                      viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                    </svg>
+                      Try it on!
+                    </button>
+                  </div>
                 </div>
 
                 {/* Price and Add to Cart */}
@@ -83,7 +100,7 @@ export function ItemPage({
                   <div className="items-center justify-between">
                     <button
                       href="#"
-                      class="text-md relative flex rounded-full border border-gray-500 bg-yellow-500 py-1 px-6 font-bold text-gray-900 shadow-lg hover:bg-yellow-400"
+                      class="text-md relative flex rounded-full border border-gray-500 bg-yellow-400 py-1 px-6 font-bold text-gray-900 shadow-lg hover:bg-yellow-300"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -102,6 +119,13 @@ export function ItemPage({
                 <p className="justify-center text-xs text-gray-800 sm:text-sm">{description}</p>
               </div>
             </div>
+
+            {/* Give Ratings */}
+            <div className="flex w-full flex-col gap-5">
+              <p className = "text-xl text-black lg:text-2xl">Purchased this item already? Rate for this item!</p>
+              <RatingBox />
+            </div>
+            
 
             {/* Other Suggested Items */}
             <div className="flex w-full flex-col gap-5">
