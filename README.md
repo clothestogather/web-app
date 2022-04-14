@@ -1,5 +1,9 @@
 # ClothesToGather Prototype
 
+**Important**: Please check the other [repository](https://github.com/clothestogather/Virtual-Try-On) that has an implementation of the AI try-on function.
+
+---
+
 ClothesToGather is a web solution that streamlines and personalises users’ fashion shopping experience and reduces overconsumption by listing collection, purchase recommendations, virtual try-on etc.
 
 This repository contains the source code for the [partial prototype / user interface](https://clothestogather.netlify.app/) of the web application which
@@ -10,7 +14,7 @@ This repository contains the source code for the [partial prototype / user inter
 - provide AI try-on function
 - alerts when there is overconsumption
 
-**Important**: Please check the other [repository](https://github.com/clothestogather/Virtual-Try-On) that has an implementation of the AI try-on function.
+Please check the other [repository](https://github.com/clothestogather/Virtual-Try-On) that has an implementation of the AI try-on function.
 
 ---
 
