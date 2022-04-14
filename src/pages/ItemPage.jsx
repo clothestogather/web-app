@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import ItemCardCollection from "../component/ItemCardCollection"
 import Header from "../component/Header"
 import InlineButton from "../component/InlineButton"
@@ -7,12 +7,22 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export function ItemPage({
-  item: { name, description, imgs, company, rating, currency, price, color, type },
   similarItems,
   shopItems,
 }) {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const { name, description, imgs, company, rating, currency, price, color, type } = location.state;
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <div className="relative flex h-screen w-screen justify-center overflow-x-hidden overflow-y-scroll">
@@ -52,7 +62,7 @@ export function ItemPage({
 
                 {/* Company name and Rating */}
                 <div className="item-center flex justify-between">
-                  <InlineButton className="justify-center font-bold underline underline-offset-2">
+                  <InlineButton className="justify-center font-bold underline underline-offset-2" onClick={() => navigate('/shop/adidas')}>
                     {company}
                   </InlineButton>
                   {/* <!-- Rating --> */}

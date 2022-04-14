@@ -8,6 +8,9 @@ import Feature2 from "../assets/feature-2.png"
 import Feature3 from "../assets/feature-3.png"
 import Feature4 from "../assets/feature-4.png"
 import ItemCardCollection from "../component/ItemCardCollection"
+import { useNavigate } from "react-router-dom"
+import Sample1 from '../assets/sample1.jpeg'
+import Sample2 from '../assets/sample2.jpeg'
 
 export default function LandingPage() {
   const colors = ["Red", "Orange", "Yellow"]
@@ -38,30 +41,38 @@ export default function LandingPage() {
     },
   ]
 
-  const testItemInfo = {
-    name: "Adidas Boys' Active Sports Athletic Tricot Jogger Pant",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima expedita architecto quos velit pariatur, quia dolor alias ullam sapiente similique ut repudiandae laborum et adipisci, mollitia quis ea quo. Nesciunt.",
-    currency: "HKD",
-    price: 65.0,
-    company: "ABC Company",
-    rating: 4.5,
-    imgs: ["https://picsum.photos/800", "https://picsum.photos/500/600", "https://picsum.photos/600/500"],
-    color: "white",
-    type: "pants",
-    featured: true,
-  }
-
   const testCollection = {
-    1: testItemInfo,
-    2: testItemInfo,
-    3: testItemInfo,
-    4: testItemInfo,
+    1: {
+      name: "Adidas Boys' Active Sports Athletic Tricot Jogger Pant",
+      description: "Check out our cloths below!!!",
+      currency: "HKD",
+      price: 377.0,
+      company: "Adidas",
+      rating: 4.5,
+      imgs: [Sample1, Sample1, Sample1],
+      color: "white",
+      type: "pants",
+      featured: true,
+    },
+    2: {
+      name: "Adidas Boys' Sprinting Sweat Pants",
+      description: "Check out our cloths below!!!",
+      currency: "HKD",
+      price: 199.0,
+      company: "Adidas",
+      rating: 5.0,
+      imgs: [Sample2, Sample2, Sample2],
+      color: "grey",
+      type: "pants",
+      featured: true
+    },
   }
 
   const [selectedCategory, setSelectedCategory] = useState("🚹")
   const [selectedColor, setSelectedColor] = useState("Color")
   const [selectedType, setSelectedType] = useState("Type")
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -222,11 +233,20 @@ export default function LandingPage() {
                 </div>
                 {/* 3.5. Filter and Search Buttons */}
                 <div className="flex  items-center justify-center gap-5">
-                  <button className="flex w-max items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 font-bold shadow-md hover:bg-cyan-500">
+                  <button
+                    className="flex w-max items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 font-bold shadow-md hover:bg-cyan-500"
+                    onClick={() =>
+                      navigate("/catalog", {
+                        state: { category: selectedCategory, color: selectedColor, type: selectedType },
+                      })
+                    }
+                  >
                     More Filters <FilterIcon width={15} height={15} />{" "}
                   </button>
-                  <button className="flex w-max items-center gap-2 rounded-full bg-yellow-400 px-6 py-2 font-bold shadow-md hover:bg-yellow-500">
-                    {" "}
+                  <button
+                    className="flex w-max items-center gap-2 rounded-full bg-yellow-400 px-6 py-2 font-bold shadow-md hover:bg-yellow-500"
+                    onClick={() => navigate("/catalog")}
+                  >
                     Search
                   </button>
                 </div>
@@ -262,7 +282,7 @@ export default function LandingPage() {
             </div>
 
             {/* Featured Items */}
-            <div className="flex flex-col items-center gap-4 rounded-t-[75px] bg-white w-full p-6  shadow-2xl lg:mt-10 lg:w-min lg:px-16 lg:py-12 lg:gap-8">
+            <div className="flex w-full flex-col items-center gap-4 rounded-t-[75px] bg-white p-6  shadow-2xl lg:mt-10 lg:w-min lg:gap-8 lg:px-16 lg:py-12">
               <h1 className="text-lg font-semibold lg:text-2xl">Featured Items</h1>
               <ItemCardCollection collection={testCollection} />
             </div>

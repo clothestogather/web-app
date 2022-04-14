@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useReducer } from "react"
 import Header from "../component/Header"
 import { DropdownIcon, CheckboxIcon } from "../assets/Svg"
 import ItemCardCollection from "../component/ItemCardCollection"
+import { useLocation } from "react-router-dom"
 
 // Does not include price (it uses slider instead)
 const normalFilters = {
-  category: ["Men", "Woman", "Children"],
+  category: ["Men", "Women", "Children"],
   subcategory: ["Top", "Bottom", "Suits/One Piece"],
   type: ["Shirt", "Skirt"],
   color: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"],
@@ -18,6 +19,21 @@ export default function CatalogPage({ items }) {
   const [selectedFilters, setSelectedFilters] = useState(
     Object.fromEntries(Object.entries(normalFilters).map(([filterCategory, filterOptions]) => [filterCategory, []]))
   )
+
+  const location = useLocation();
+  const [, forceUpdate] = useReducer(x => x + 1, 0);
+
+  useEffect(() => {
+    console.log(location.state)
+    if(location.state){
+      const temp = selectedFilters;
+      temp["category"] = (location.state.category === '🚹' ? ['Men'] : location.state.category === '🚺' ? ['Women'] : ['Children'])
+      temp["color"] = (location.state.color === 'Color' ? [] : [location.state.color]);
+      temp["type"] = (location.state.type === 'Type' ? [] : [location.state.type])
+      setSelectedFilters(temp)
+      forceUpdate();
+    }
+  }, []);
 
   return (
     <>

@@ -3,9 +3,9 @@ import ItemCardCollection from "../component/ItemCardCollection"
 import { FacebookIcon, InstagramIcon, WebsiteIcon } from "../assets/Svg"
 import Header from "../component/Header"
 import InlineButton from "../component/InlineButton"
+import ShopLogo from "../assets/shoplogo.png"
 
-export function ShopPage({ items, shopInfo: {name, description, iconURL} }) {
-
+export function ShopPage({ items, shopInfo: { name, description, iconURL, links } }) {
   useEffect(() => {
     console.log(name, description, iconURL)
   }, [])
@@ -28,17 +28,29 @@ export function ShopPage({ items, shopInfo: {name, description, iconURL} }) {
                   <p className="justify-center text-2xl font-bold text-black lg:text-3xl">{name}</p>
                   {/* Shop Links */}
                   <div className="flex items-center gap-3 lg:gap-5">
-                    <InlineButton>
-                      <InstagramIcon width={25} height={25} />
-                    </InlineButton>
+                    {links.instagram && (
+                      <a href={links.instagram}>
+                        <InlineButton>
+                          <InstagramIcon width={25} height={25} />
+                        </InlineButton>
+                      </a>
+                    )}
 
-                    <InlineButton>
-                      <FacebookIcon width={25} height={25} />
-                    </InlineButton>
+                    {links.facebook && (
+                      <a href={links.facebook}>
+                        <InlineButton>
+                          <FacebookIcon width={25} height={25} />
+                        </InlineButton>
+                      </a>
+                    )}
 
-                    <InlineButton>
-                      <WebsiteIcon width={25} height={25} />
-                    </InlineButton>
+                    {links.website && (
+                      <a href={links.website}>
+                        <InlineButton>
+                          <WebsiteIcon width={25} height={25} />
+                        </InlineButton>
+                      </a>
+                    )}
                   </div>
                 </div>
                 <p className="justify-center text-xs text-gray-800 sm:text-sm">{description}</p>
@@ -47,7 +59,7 @@ export function ShopPage({ items, shopInfo: {name, description, iconURL} }) {
               {/* Shop Icon */}
               <img
                 className="h-auto max-h-[15rem] w-24 justify-center rounded-full border border-gray-500 object-cover shadow-lg lg:w-40"
-                src={iconURL}
+                src={ShopLogo}
                 alt="Shop Icon"
               />
             </div>

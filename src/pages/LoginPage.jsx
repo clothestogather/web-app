@@ -10,7 +10,7 @@ export function LoginPage() {
           {/* Header */}
           <Header />
           {/* Content */}
-          <div className="bg-gray-100 w-full min-h-screen gap-2 flex-wrap flex justify-center items-center">
+          <div className=" w-full h-full gap-2 flex-wrap flex justify-center items-center">
             {/* Log in */}
             <div className="w-full max-w-md items-center px-8 ">
             <form className="bg-gray-200 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">

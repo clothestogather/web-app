@@ -1,5 +1,5 @@
 import React from "react"
-export function ItemCard({ name, currency, price, rating, imgs, featured, onClick }) {
+export function ItemCard({ name, currency, price, rating, imgs, featured = false, onClick }) {
   return (
     <div
       className={

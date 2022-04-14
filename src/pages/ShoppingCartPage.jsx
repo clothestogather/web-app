@@ -31,10 +31,10 @@ export default function ShoppingCartPage({ items }) {
                 Object.entries(items).map(([itemID, item]) => (
                   <div
                     className="flex w-full items-center justify-between gap-5 rounded-2xl border border-gray-500 p-4 shadow-md hover:cursor-pointer hover:bg-gray-200"
-                    onClick={() => navigateItem(itemID)}
+                    onClick={() => navigate('/itempage', {state: item})}
                   >
                     <div className="flex items-center gap-5">
-                      <img className="w-24 rounded-xl" src="https://picsum.photos/500" alt="" />
+                      <img className="w-24 rounded-xl" src={item.imgs[0]} alt="" />
                       <div className="flex flex-col gap-1">
                         <div className="text-sm">{item.name}</div>
                         <div className="flex items-center gap-1">
