@@ -7,11 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-<<<<<<< HEAD
 import { useLocation, useNavigate } from "react-router-dom"
-=======
 import RatingBox from "../component/Rating";
->>>>>>> 06efde5a6ea89bce4fb6bfb8e7eb68d16f5ba288
 
 export function ItemPage({
   similarItems,
